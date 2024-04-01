@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: ./docker
+      dockerfile: Gatsby.Dockerfile
+
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - /gatsby-wp/node_modules
+      - .:/gatsby-wp
